@@ -208,6 +208,18 @@
 		throwforce = 35
 		playsound(user, 'sound/weapons/saberon.ogg', 5, 1)
 		to_chat(user, "<span class='warning'>[src] is now active.</span>")
+	if(user.dir == target.dir)
+	    on = TRUE
+	    knockdown
+	    force = 25
+	    w_class = WEIGHT_CLASS_NORMAL
+		name = "energy dagger"
+		hitsound = 'sound/weapons/blade1.ogg'
+		embedding = embedding.setRating(embed_chance = 200)
+		w_class = WEIGHT_CLASS_NORMAL
+		name = "energy dagger"
+		hitsound = 'sound/weapons/blade1.ogg'
+     	embedding = embedding.setRating(embed_chance = 100) //rule of cool
 	GET_COMPONENT_FROM(butchering, /datum/component/butchering, src)
 	butchering.butchering_enabled = on
 	update_icon()
